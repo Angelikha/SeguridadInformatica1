@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Juego</title>
+<style>
+ 
+#cuadrado{ width:300px; height:300px; overflow:hidden;}
+#mapa{ position:relative; left:-300px; top:-300px; }
+#pj{ position:absolute; left:150px; top:120px;}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body style="background-repeat: no-repeat;" background="http://i64.tinypic.com/168vac1.png">
+<div id="cuadrado"><div id="mapa"><img src="img/mapa.jpg"></div></div>
+<div id="pj"><img src="img/pj.png"></div>
+<div id="datos"></div>
+</body>
+<nav>
+        
+    <li><a href="Actividades.html" class="nave">ACTIVIDADES</a></li>
+  </nav>
+<script>
+$(document).keypress(function( event ) {
+	switch(event.which)
+	{	
+		case 119: // W
+			$("#datos").text("arriba");
+			$( "#mapa" ).animate({ "top": "+=50px" }, "slow" );
+		break;
+		case 97: // A
+			$("#datos").text("izquierda");
+			$( "#mapa" ).animate({ "left": "+=50px" }, "slow" );
+		break;
+		case 100: // D
+			$("#datos").text("derecha");
+			$( "#mapa" ).animate({ "left": "-=50px" }, "slow" );
+		break;
+		case 115: // S
+			$("#datos").text("abajo");
+			$( "#mapa" ).animate({ "top": "-=50px" }, "slow" );
+		break;
+	}
+    $("#datos").text("tecla:"+event.which);
+  });
+</script>
+</html>

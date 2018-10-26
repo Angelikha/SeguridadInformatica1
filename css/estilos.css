@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #CCCCCC;
+}
+div h1{
+    float: right;
+    color: #A54686;
+     
+}
+#contenedor{
+    width: 960px;
+    float: right;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+header{
+    background: #FFFFFF;
+    height: 100%;
+    float: none;
+}
+
+nav{
+    border: 3px solid blue;
+    position: absolute;
+    left: 0;
+    width: 220px; 
+    background: #FFFFFF;
+    height: 170px;
+    margin-top: 10px;
+}
+
+nav li{
+    list-style: none;
+    display: run-in;
+    padding: 0px 10px;
+}
+
+
+nav a{
+    color: #A54686;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: arial;
+    text-decoration: none;
+}
+
+nav a:hover{
+    background: #CCCCCC;
+    color: #000000;
+    
+}
+
+
+#contenido{
+    float: right;
+    width: 700px;
+    background: #CCCCCC;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+}
+
+.articulos{
+    margin: 10px;
+    background: #FFFFFF;
+
+}
+
+.articulos h2{
+    border: 3px solid yellow;
+    border-radius: 10px;
+    font-size: 30px;
+    padding: 10px;
+    color: #00000;
+    font-family: arial;
+    color: #FFC300;
+}
+.articulos h2 p{
+    float: left;
+}
+
+.articulos img{
+    float: right;
+    margin:10px;
+    border: 3px solid blue;
+}
+
+.articulos h3{
+    float: right;
+    margin:10px;
+    border: 3px solid blue;
+}
+.articulos h3 p{
+    float: right;
+    margin:10px;
+    border: 3px solid blue;
+
+    }
+
+.articulos p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background: #FFFFFF;
+    border-bottom: 3px solid #000000;
+    font-family: arial;
+    text-align: justify;
+}
+
+aside{
+    float: left; 
+    
+    width: 220px;
+    background: #FFFFFF;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 3px solid blue;
+
+
+}
+
+aside h3{
+    font-size: 20px;
+    color: #FFFFFF;
+    background: #000000;
+    border-radius: 4px;
+    text-align: center;
+    padding: 10PX;
+    font-family: arial;
+}
+
+aside p{
+    padding: 10px;
+    font-size: 14px;
+    font-family: arial;
+    text-align: justify;
+}
+
+footer{
+    height: 40px;
+    background: #000000;
+    color: #FFFFFF;
+    clear: both;
+
+}
+
+footer p{
+    font-size: 15px;
+    font-family: arial;
+    text-align: center;
+    line-height: 35px;
+
+}

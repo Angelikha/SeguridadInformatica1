@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Test Seguridad Informatica</title>
+
+
+<script src="https://code.jquery.com/jquery.js"></script>
+
+</head>
+<body style="width:100%; background-repeat: no-repeat;" background="https://st3.depositphotos.com/13533222/16310/v/1600/depositphotos_163104498-stock-illustration-cartoon-young-boy-unaware-expression.jpg">
+
+<left>
+<a><img src="http://i64.tinypic.com/9k82e1.png" border="0"; position="relative"; top="-10px"></a>
+</left>
+	<nav>
+				
+		<li><a href="Actividades.html" class="nave">ACTIVIDADES</a></li>
+	</nav>
+<br>
+<br>
+<br>
+<br>
+	<div style="border-radius: 10px; width: 50%; height: 40%; background-color: black; color: white; position: relative; left: 50%;">
+<div style="font-size: 25px; font-color: white;" id="pregunta"></div>
+	<div style="font-size: 25px;" id="respuestas"></div>
+<br>
+<br>
+<input style=" left:270px; position: relative; text-align: right; font-size: 30px; border-radius: 15px;" type="button" value="Evaluar" onclick="comprobar()">
+	<script>
+		var preguntas = [
+		"¿Que caracteristicas tiene una contrasena segura?",
+		"¿Que es un antivirus?",
+		"¿Cual es la mejor forma de salvar tu informacion?",
+		"¿Cuel es una buena practica para no extraviar informacion?",
+		"¿Cual es la mejor forma de que tu pc este seguro?"
+
+		];
+		var respuestas = [
+		["Tiene mayusculas, minusculas y numeros", "Tenerla escrita", "Solo numeros", "Utilizar fechas especiales"],
+		["Un protector contra programas maliciosos", "Un seguro de vida", "Un Juego", "Un seguro para del pc"],
+		["Realizando copias de seguridad periodicamente", "Dejandolas en el escritorio", "Subiendola a redes sociales", "Limpiando el polvo del pc"],
+		["Limitar el numero de usuario que tienen acceso al pc","Pedir a una persona que la guarde","Hacer publica la clave de acceso al pc","Utilizar solo memorias"],
+		["Instalar un antivirus","No dejar que lo toquen","No utilizar Cds","No utilizar memorias"]
+
+		];
+jugar();
+
+		var indicie_respuesta_correcta;
+
+function jugar(){
+			var indice_aleatorio = Math.floor(Math.random()*preguntas.length);
+
+
+		var respuestas_posibles = respuestas[indice_aleatorio];
+
+
+		var posiciones = [0,1,2,3];
+		var respuestas_reordenadas = [];
+
+		var ya_se_metio = false;
+		for(i in respuestas_posibles){
+			var posicion_aleatoria = Math.floor(Math.random()*posiciones.length);
+			if(posicion_aleatoria==0 && ya_se_metio == false){
+				indicie_respuesta_correcta =i;
+				ya_se_metio = true;
+			}
+			respuestas_reordenadas[i] = respuestas_posibles[posiciones[posicion_aleatoria]];
+			posiciones.splice(posicion_aleatoria, 1);
+		}
+
+		var txt_respuestas="";
+		for(i in respuestas_reordenadas){
+			txt_respuestas += '<input type="radio" name="pp" value="'+i+'"><label>'+respuestas_reordenadas[i]+'</label><br>';
+		}
+
+		document.getElementById("respuestas").innerHTML = txt_respuestas;
+		document.getElementById("pregunta").innerHTML = preguntas[indice_aleatorio];
+
+}
+function comprobar(){
+	var respuesta = $("input[type=radio]:checked").val();
+
+	//alert(respuesta);
+	//alert(indicie_respuesta_correcta);
+	if(respuesta ==indicie_respuesta_correcta){
+		alert("que bien!");
+	}else{
+		alert("Lo siento intenta de nuevo");
+	}
+	jugar();
+}
+	</script>
+</div>
+
+
+</body>
+</html>
